@@ -1,25 +1,11 @@
-This is e-pTeX, Version 3.1415926-p3.3-110825-2.4 (utf8.euc) (TeX Live 2012) (format=platex 2012.11.19)  9 OCT 2013 20:43
-entering extended mode
- restricted \write18 enabled.
- %&-line parsing enabled.
-**paper.tex
-(./paper.tex
-pLaTeX2e <2006/11/10> (based on LaTeX2e <2011/06/27> patch level 0)
-Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, ge
-rman-x-2012-05-30, ngerman-x-2012-05-30, afrikaans, ancientgreek, ibycus, arabi
-c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
-h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
-h, french, friulan, galician, german, ngerman, swissgerman, monogreek, greek, h
-ungarian, icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, ma
-rathi, oriya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, 
-kurmanji, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk,
- polish, portuguese, romanian, romansh, russian, sanskrit, serbian, serbianc, s
-lovak, slovenian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, 
-welsh, loaded.
-(/usr/local/texlive/2012/texmf-dist/tex/platex/base/jarticle.cls
+This is upTeX, Version 3.141592-p3.1.11-u0.30 (sjis) (Web2C 7.5.4) (format=uplatex-sjis 2011.7.24)  31 OCT 2013 19:02
+**/Users/masaru/RCVRCamp2013/sig-sai-paper-2013-11-10/paper.tex
+(/Users/masaru/RCVRCamp2013/sig-sai-paper-2013-11-10/paper.tex
+pLaTeX2e <2006/11/10>+0 (based on LaTeX2e <2003/12/01> patch level 0)
+(/Applications/UpTeX.app/teTeX/share/texmf/ptex/platex/base/jarticle.cls
 Document Class: jarticle 2006/06/27 v1.6 Standard pLaTeX class
 \c@@paper=\count81
-(/usr/local/texlive/2012/texmf-dist/tex/platex/base/jsize10.clo
+(/Applications/UpTeX.app/teTeX/share/texmf/ptex/platex/base/jsize10.clo
 File: jsize10.clo 2006/06/27 v1.6 Standard pLaTeX file (size option)
 )
 \c@part=\count82
@@ -40,7 +26,7 @@ LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
 \bibindent=\dimen120
 \heisei=\count90
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/comment/comment.sty
+(/Applications/UpTeX.app/teTeX/share/texmf-dist/tex/latex/comment/comment.sty
 \CommentStream=\write3
 
 Excluding comment 'comment') (./jsaisig.sty
@@ -49,7 +35,7 @@ Excluding comment 'comment') (./jsaisig.sty
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
 nment
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/float/float.sty
+(/Applications/UpTeX.app/teTeX/share/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count91
 \float@exts=\toks15
@@ -57,7 +43,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks16
 \@floatcapt=\box42
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/base/ifthen.sty
+(/Applications/UpTeX.app/teTeX/share/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \@float@every@algorithm=\toks17
@@ -81,31 +67,32 @@ Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
 Package: algpseudocode 
 
 Document Style - pseudocode environments for use with the `algorithmicx' style
-) (/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphicx.sty
+)
+(/Applications/UpTeX.app/teTeX/share/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
-
-(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/keyval.sty
+(/Applications/UpTeX.app/teTeX/share/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks18
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+(/Applications/UpTeX.app/teTeX/share/texmf/tex/latex/graphics/dvipdfmx-contrib-
+latex/graphics.sty
+Package: graphics 2001/07/07 v1.0n Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/trig.sty
+(/Applications/UpTeX.app/teTeX/share/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/graphics.cfg
-File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+(/Applications/UpTeX.app/teTeX/share/texmf-dist/tex/latex/graphics/graphics.cfg
+File: graphics.cfg 2005/02/03 v1.3 graphics configuration of teTeX/TeXLive
 )
-Package graphics Info: Driver file: dvipdfmx.def on input line 91.
+Package graphics Info: Driver file: dvipdfmx.def on input line 81.
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def
+(/Applications/UpTeX.app/teTeX/share/texmf/tex/latex/graphics/dvipdfmx-contrib-
+latex/dvipdfmx.def
 File: dvipdfmx.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 ))
 \Gin@req@height=\dimen121
 \Gin@req@width=\dimen122
-)
-(./paper.aux)
+) (./paper.aux)
 \openout1 = `paper.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
@@ -125,148 +112,80 @@ LaTeX Font Info:    ... okay on input line 14.
 LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 49.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 50.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 49.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 50.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 49.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 50.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 49.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 50.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 49.
+(Font)              <12> on input line 50.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 49.
+(Font)              <8> on input line 50.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 49.
+(Font)              <6> on input line 50.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 49.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 50.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 49.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 50.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 49.
+(Font)              <7> on input line 50.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 49.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 103.
-
-Overfull \hbox (13.74048pt too wide) in paragraph at lines 103--117
- [][] 
- []
+(Font)              <5> on input line 50.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 74.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 74.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Font Warning: Font shape `JT1/mc/m/it' undefined
+(Font)              using `JT1/mc/m/n' instead on input line 92.
 
-File: fig/wtc-comparison.pdf Graphic file (type pdf)
-<fig/wtc-comparison.pdf>
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-File: fig/info-model.pdf Graphic file (type pdf)
-<fig/info-model.pdf>
-Overfull \hbox (0.98pt too wide) in paragraph at lines 149--150
- [][] 
- []
+LaTeX Font Warning: Font shape `JY1/mc/m/it' undefined
+(Font)              using `JY1/mc/m/n' instead on input line 92.
 
 [1
 
 
 
 ]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 178.
-LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 178.
-File: fig/trans-model.pdf Graphic file (type pdf)
-<fig/trans-model.pdf>
-Overfull \hbox (17.82681pt too wide) in paragraph at lines 196--203
- [][] 
- []
-
-[2]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-File: ./fig/system-architecture.pdf Graphic file (type pdf)
-<./fig/system-architecture.pdf>
-Overfull \hbox (0.98pt too wide) in paragraph at lines 277--278
- [][] 
+Underfull \hbox (badness 1142) in paragraph at lines 105--108
+[]\JY1/mc/m/it/10 óWñ{ èró∫\OT1/cmr/m/n/10 : \JY1/mc/m/it/10 îìÔÇ∆èÓïÒìdéqèÓïÒ
+í êMäwâÔéè\OT1/cmr/m/n/10 ,
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-File: fig/unimall.pdf Graphic file (type pdf)
-<fig/unimall.pdf> [3]
-File: fig/number-of-friends.pdf Graphic file (type pdf)
- <fig/number-of-friends.pdf>
-File: fig/p-100-plot-with-legend.pdf Graphic file (type pdf)
-
-<fig/p-100-plot-with-legend.pdf>
-File: fig/p-50-plot-with-legend.pdf Graphic file (type pdf)
- <fig/p-50-plot-with-legend.pdf>
-Overfull \hbox (12.0pt too wide) in paragraph at lines 378--384
- [][] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-File: fig/p100-sns-20131009-1844.pdf Graphic file (type pdf)
-<fig/p100-sns-20131009-1844.pdf>
-File: fig/p50-sns-20131009-1911.pdf Graphic file (type pdf)
- <fig/p50-sns-20131009-1911.pdf>
-Overfull \hbox (20.53581pt too wide) in paragraph at lines 390--396
- [][] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Font Warning: Font shape `JT1/mc/m/it' undefined
-(Font)              using `JT1/mc/m/n' instead on input line 436.
-
-
-LaTeX Font Warning: Font shape `JY1/mc/m/it' undefined
-(Font)              using `JY1/mc/m/n' instead on input line 436.
-
-[4]
-Underfull \hbox (badness 1142) in paragraph at lines 449--452
-[]\JY1/mc/m/it/10 ÈÇëÊú¨ ‰øä‰∫Æ\OT1/cmr/m/n/10 : \JY1/mc/m/it/10 ÈÅøÈõ£„Å®ÊÉÖÂ†±ÈõªÂ≠êÊÉÖÂ†±
-ÈÄö‰ø°Â≠¶‰ºöË™å\OT1/cmr/m/n/10 ,
- []
-
-
-Underfull \hbox (badness 1052) in paragraph at lines 469--472
+Underfull \hbox (badness 1052) in paragraph at lines 125--128
 \OT1/cmr/m/n/10 tions, and So-cial com-par-i-son \OT1/cmr/m/it/10 AA-MAS 2011\O
 T1/cmr/m/n/10 ,
  []
 
 
-Underfull \hbox (badness 3386) in paragraph at lines 484--487
+Underfull \hbox (badness 3386) in paragraph at lines 140--143
 []\OT1/cmr/m/n/10 Stanford Uni-ver-sity: So-cial cir-cles: Face-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 484--487
+Underfull \hbox (badness 10000) in paragraph at lines 140--143
 \OT1/cmr/m/n/10 book http://snap.stanford.edu/data/egonets-
  []
 
-[5] (./paper.aux)
+[2
+
+] (./paper.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 1356 strings out of 494059
- 17632 string characters out of 3156204
- 79363 words of memory out of 3000000
- 4792 multiletter control sequences out of 15000+200000
- 16398 words of font info for 63 fonts, out of 3000000 for 9000
- 745 hyphenation exceptions out of 8191
- 25i,12n,22p,273b,401s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 1276 strings out of 94671
+ 16904 string characters out of 1174362
+ 70410 words of memory out of 1500000
+ 4595 multiletter control sequences out of 10000+50000
+ 15008 words of font info for 58 fonts, out of 1200000 for 2000
+ 566 hyphenation exceptions out of 8191
+ 25i,11n,22p,1025b,399s stack positions out of 5000i,500n,6000p,200000b,5000s
 
-Output written on paper.dvi (5 pages, 30492 bytes).
+Output written on paper.dvi (2 pages, 8032 bytes).
