@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="Paper" default="default" basedir=".">
+  
+  <description>Latex Project</description>
+  
+  <!-- <tstamp><format property='build.time' pattern='yyyyMMdd'/></tstamp> -->
+  <tstamp><format property='build.time' pattern='yyyyMMdd-HHmmss'/></tstamp>
+  
+  <property name="latex.home" value="/Applications/LaTeX/UpTeX.app/teTeX/bin"/>
+  <property name="command.bibtex" value="${latex.home}/jbibtex"/>
+  <property name="command.latex" value="${latex.home}/platex"/>
+  <property name="command.dvipdf" value="${latex.home}/dvipdfmx"/>
+  <property name="command.ebb" value="${latex.home}/ebb"/>
+  <property name="command.show" value="open"/>
+  <property name="latex.output" value=""/>
+  
+  <property name="target" value="${basedir}/paper"/>
+  <property name="figure" value="${basedir}/fig"/>
+  <property name="backup.dir" value="../backup"/>
+  <property name="encoding" value="sjis"/> <!--  encoding = euc|jis|sjis|utf8 -->
+  
+  <target name="default" description="">
+    <antcall target="compile"/>
+    <!-- <antcall target="show"/> -->
+    <antcall target="backup"/>
+    <antcall target="clean"/>
+  </target>
+  
+  <target name="compile" depends="clean">
+    <!-- -->
+    <antcall target="create-bb"/>
+    <antcall target="latex"/>
+    <!--
+      <antcall target="bibtex"/>
+    -->
+    <antcall target="latex"/>
+    <antcall target="latex"/>
+    
+    <antcall target="dvipdf"/>
+  </target>
+  
+  <target name="create-bb">
+    <exec executable="/bin/bash" dir="${figure}" failonerror="true">
+      <arg value="-c"/> 
+      <arg value="${command.ebb} *.png"/> 
+    </exec> 
+    <exec executable="/bin/bash" dir="${figure}" failonerror="true">
+      <arg value="-c"/> 
+      <arg value="${command.ebb} *.jpg"/> 
+    </exec> 
+    <exec executable="/bin/bash" dir="${figure}" failonerror="true">
+      <arg value="-c"/> 
+      <arg value="${command.ebb} *.pdf"/> 
+    </exec> 
+  </target>
+  
+  <target name="showlog">
+    <loadfile property="message" srcFile="latex-output.log"/>
+    <echo message="${message}"/>
+  </target>
+  
+  <target name="latex">
+    <exec executable="${command.latex}" failonerror="true" output="latex-output.log">
+      <arg value="-kanji=${encoding}"/>
+      <arg value="${target}.tex"/>
+    </exec>
+  </target>
+  
+  <target name="dvipdf">
+    <exec executable="${command.dvipdf}" failonerror="true">
+      <!--  -l: landscape 
+        <arg value="-l"/>
+      landscape -->
+      <arg value="${target}"/>
+    </exec>
+  </target>
+
+  <target name="bibtex">
+    <exec executable="${command.bibtex}" failonerror="true">
+      <arg value="-kanji=sjis"/>
+      <arg value="${target}"/>
+    </exec>
+  </target>
+  
+  <target name="backup">
+    <copy file="${target}.tex" tofile="${backup.dir}/paper-${build.time}.tex"/>
+    <copy file="${target}.pdf" tofile="${backup.dir}/paper-${build.time}.pdf"/>
+  </target>
+  
+  <target name="show">
+    <exec executable="${command.show}">
+      <arg value="${target}.pdf"/>
+    </exec>
+  </target>
+  
+  <target name="clean">
+    <!-- <delete file="${target}.pdf"/> -->
+    <delete file="${target}.aux"/>
+    <delete file="${target}.dvi"/>
+    <delete file="${target}.log"/>
+    <delete file="latex-output.log"/>
+    <!--
+        <delete file="${target}.bbl"/>
+        -->
+    <delete file="${target}.blg"/>
+    <delete>
+      <fileset dir="." includes="**/*~" defaultexcludes="no"/>
+    </delete>
+  </target>
+  
+</project>
