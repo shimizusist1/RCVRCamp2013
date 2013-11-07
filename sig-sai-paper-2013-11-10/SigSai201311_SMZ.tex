@@ -1,0 +1,143 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4j]{jarticle}
+
+\usepackage{comment}
+\usepackage{jsaisig}
+\usepackage{algorithm,algorithmicx}
+\usepackage{algpseudocode}
+\usepackage[dvipdfmx]{graphicx}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand\todo[1]{@TODO[#1]}
+
+
+\begin{document}
+% 和文タイトル
+\title{RoboCup Rescue Virtual Robot Leagueを使った教材開発の検討}
+
+
+% 英文タイトル
+\etitle{A Proposal of a robotic educational material with RoboCup Rescue Virtual Robot League Environment} 
+
+% 著者名: 
+%	・各著者を\quad（全角空白）区切りで列挙
+% 	・著者名の直後に\afil{所属番号}を追加→所属番号を上付で出力（\textsuperscript{所属番号}と同じ）
+% 	　複数機関へ所属している場合は番号をカンマ区切りで列挙（下記著者２参照）
+% 　・Corresponding Authorについては所属の後に\thanksを続け，連絡先を記入
+%	・英文著者はカンマ区切りで列挙
+\author{西村　秀樹\afil{1}%
+ 	\thanks{%
+    連絡先： 名城大学 理工学部 情報工学科 \newline%
+    〒468-8502 名古屋市天白区塩釜口1-501 \newline%
+  	 E-mail: {133430011@ccalumni.meijo-u.ac.jp}%
+  }%
+ 	\quad 清水 優\afil{2} \quad 高橋 友一\afil{1}\\
+  Hideki Nishimura\afil{1} \quad Masaru Shimizu\afil{1} \quad Tomoichi Takahashi\afil{1}
+}
+
+% 所属
+\affiliation{%
+ 	\afil{1} 名城大学 理工学部 情報工学科\\
+ 	\afil{2} 中京大学 工学部 機械システム工学科\\
+  \afil{1} Meijo University, Department of Information Engineering\\
+  \afil{2} Chukyo University, School of Engineering
+}
+
+\abstract{%
+RoboCup world champion ship has the Rescue Virtual Robot League(RVRL). The simulation environment of RVRL consists of USARSim and WSS, ROS. USARSim is a realistic physical simulator with several rescue robot models and victims, sensors, obstacles, convenience parts for making disaster field model. WSS is Wireless Simulation Server to realize the controllable wireless environment. For example, depending on the distance of robots, WSS can connect and disconnect wireless communication between a couple of robots. ROS is a kind of Robot Operating System Library. It makes easy to write some nice robotic softwares. Those RVRL simulation environment is good at an education scene in robotics. The realistic simulator's representation increase will not only keep but also increase student's motivation. WSS will change the simulated disaster field into challenging and wondering one. Students will be able to make robotic programs more fast and easy than before.
+Those are reasons to propose making an educational simulation environment with the RVRL simulation environment.
+}
+
+\maketitle
+\thispagestyle{empty}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{はじめに}\label{sec:introduction}
+2011年3月に発生した東日本大震災では，福島第一原子力発電所が被災し，地震災害に加えて放射能汚染の影響があった．
+福島第一原子力発電所内部と原子力発電所から飛散した放射性物質により人が立ち入れない地区が発生し，それら放射能による立ち入り禁止区域ではロボットによる作業が必要となった．
+今後は，全国あるいは全世界に多数存在する原子力発電所や人が立ち入れない極限空間でのレスキュー活動に対応するためのロボット開発がよりいっそう求められる．
+レスキューロボットの開発は，災害の発生時期を予見できない事から，常に短い開発サイクルで行う必要に迫られている．
+さらに特定の災害現場に特化したロボットの開発が求められる事もあり，短期間でのロボット開発手法の確立も必要である．
+また，ロボット開発にたずさわる研究者・技術者の育成過程においても，期間並びにコスト的な問題がある．
+近年のレスキューロボット開発においては，自動的に情報を収集し地図を構築する機能を中核とした自律型探査ロボットに見られるソフトウェア開発の比重も大きくなってきている．
+そこで筆者等は，前述のレスキューロボット開発に関わる要素を俯瞰し，シミュレータを活用したレスキューロボット開発環境の導入を提案する．
+
+RoboCup世界大会にはRescue Virtual Robot League(RVRL)があり，USARSimというレスキューロボットに特化したシミュレータをプラットフォームとしている．
+USARSimは，リアルなシミュレーション画像とリアルタイム性を重視したシミュレータである．
+USARSimではロボットと制御プログラムの間のデータ通信にサーバ・クライアント型のデータ送受信方式を採用しているため，USARSim内部のロボットとロボット制御プログラムはネットワークを用いて通信する．
+通常のロボット開発においても，ロボットのハードウェア部分と制御プログラムを実行している計算機は何らかのネットワークで接続する形態が多い．
+USARSimでのロボット開発は通常のロボット開発に近い形態であるため，ロボット制御プログラムは別途に開発者が用意できる自由度がある．
+その点では，USARSimを利用したロボット開発は，通常のロボット開発と同レベルの柔軟性を備えている．
+またUSARSimには，代表的な移動機構を持つ数種類のレスキューロボットとセンサ，要救助者，災害現場を構築するための障害物などのモデルが既に含まれている．
+無線障害を模倣するためのプログラムWSS(Wireless Simulation Server)も実装され，ロボットシステムの無線障害への対応も評価できるようになっている．
+さらに，シミュレータを用いるメリットである開発準備期間の短縮および低コスト化もあり，教育現場での活用も期待できる．
+
+本報では，このUSARSimによるレスキューロボット開発教育教材を提案する．
+
+\section{これまでの開発環境の問題点}\label{sec:related-works}
+これまでのロボットシミュレータには，ODE(Open Dynamic Engine)のような仮想環境およびロボットの構築にコーディングが必要な開発環境が使用されていた．主に特定の仮想環境と仮想ロボットを対象とし，二足歩行モーションの生成など物理演算を主体としていたので，それで十分であった．しかし次の問題点がある．
+\begin{enumerate}
+\item リアルなシミュレーション画像ではない＝ロボットカメラ視点の映像を使ったロボットビジョンプログラム開発が困難，ロボットビジョンを使用したロボット制御プログラムの開発が困難
+\item リアルタイムではない＝現在の環境をもとにしたロボットの制御プログラムを開発し難い
+\item 実際の災害現場の再現が難しい
+\item 実際のレスキューロボットのモデルが無い＝ロボットは自分で構築
+\item 無線障害等の物理的ではない障害は，基本的に考慮されていない
+\item ロボット制御プログラムは，基本的にシミュレータ内部に構築する＝初心者向きでは無い
+\item 検証したロボット制御プログラムを実機に搭載する際には，何らかの移植作業が必要
+%\item 上記問題点を解決できない
+\end{enumerate}
+それらの点がUSARSimでは克服できる.
+
+\section{提案する学習用ロボット環境のメリット}\label{sec:the-merit-of-our-proposal}
+
+前述の問題点に対して，USARSimでは以下のメリットがある．
+\begin{enumerate}
+\item リアルなシミュレーション画像が得られる=ロボットビジョンを使用したロボット制御アルゴリズムの理論検証が可能
+\item USARSimでは，ロボット制御プログラムはリアルタイムにセンサ情報を取得可能であり，リアルタイムな環境下で制御アルゴリズムの挙動評価が可能である
+\item USARSimは仮想環境編集ソフトが付属しており，CAD感覚で災害現場の再現が可能
+\item USARSimは，レスキューロボット用に調整されており，実際のレスキューロボットのモデルが多数用意されている
+\item サーバ・クライアント型なので，ロボット－オペレータ間，ロボット－ロボット間の通信にWSSを容易に挿入する事が出来る
+%USARSimではロボットと制御プログラム間の通信はサーバ・クライアント型である．
+\item ロボット制御プログラムは，サーバ・クライアント型でのデータ通信を行えるプログラム開発環境であれば，開発者にとって都合の良い開発環境を使用できる＝初心者でもデータ通信部分の学習が終わっていれば，ロボット制御プログラムの開発を開始できる
+\item 制御プログラムの接続先をUSARSim内部のロボットにするのか，実機にするのか切り替えられるようにしておくと，USARSimで理論検証の済んだ制御プログラムを容易に実機での検証へ進める事が可能である．
+\end{enumerate}
+
+さらに，以下のようなことも可能である．
+\begin{itemize}
+\item １つのシミュレーション環境に存在している複数のロボットに対して，別個の計算機で実行しているロボット制御プログラムを接続できる
+\item 実行中のシミュレーション環境に，後から複数のロボットを参加させることができる
+\end{itemize}
+
+
+\section{USARSimおよびWSS}\label{sec:USARSimWSS}
+\subsection{USARSim}
+\subsection{WSS}
+\subsection{ROS}
+
+\section{まとめ}
+十分にリアルでかつ実際の災害現場を模した学習用ロボット仮想環境の提案をした.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section*{謝辞}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thebibliography}{99}
+%\small
+
+%\bibitem{abbas:13}
+%{{Abbas, A.}, {Muhammad, S.}}:
+%{Homophily, Popularity and Randomness: Modelling Growth of Online Social Network}
+%{\it AAMAS 2013} (2013)
+
+
+\begin{comment}
+\bibitem{}
+First, A., Second, A.:
+Homophily, Popularity and Randomness: Modelling Growth of Online Social Networkち
+{\it Journal Name}, Vol.~xx, No.~x, pp.~xx--xx (2007)
+\end{comment}
+
+\end{thebibliography}
+
+\end{document}
